@@ -1,9 +1,73 @@
-ul {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap');
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15pt;
+}
+header {
+    height: calc(100vh - 150px);
+    background: no-repeat center/cover url('Imagens/image-header.jpg')
+}
+.texto-header {
+    margin: 20px;
+
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+header nav ul {
     list-style: none;
     display: flex;
 
 }
-li{
-    margin: 0 15px;
-    margin: auto;
+header nav ul li{
+    margin: 0 25px;
+    
 }
+ button {
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px;
+    font-weight: bold;
+    border: none;
+    background-color: #A4BFBA;
+ }
+
+img {
+    margin: 20px;
+}
+/* Responsividade*/
+
+/* Landscape phones and down */
+@media (max-width: 480px) {  
+    header nav ul {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        background: #1D594E;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        display: flex;
+
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
