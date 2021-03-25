@@ -156,7 +156,19 @@ ul.icones li {
     color: rgba(255, 255, 255, 0.719);
 
 }
+.servicos {
+    background-color: #EDF8FD ;
+}
+.servicos .card {
+    margin-left: 20px ;
+    font-family: 'Open Sans', sans-serif ;
+}
 
+.servicos .card svg {
+    color: #226F54;
+    stroke-width: 2.5px;
+    
+}
 
 
  /* Responsividade*/
