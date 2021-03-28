@@ -7,6 +7,7 @@
     <title>Travelling Quest</title>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
 </head>
 <body>
@@ -25,9 +26,9 @@
         </nav>
         <div class="texto-header">
             
-            <h1>Noruega</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quidem placeat officia qui! Maxime tempore magnam nobis inventore dignissimos aspernatur non praesentium vitae laborum aperiam ratione tempora expedita, ipsa temporibus? <br> Junte-se a nós nessa viagem</p>
-            <button>Saiba Mais</button>
+            <h1>Conheça a <b>Noruega</b></h1>
+            <p>A Noruega é um país escandinavo que abrange montanhas, geleiras e fiordes litorâneos profundos. Oslo, a capital, é uma cidade cheia de áreas verdes e museus. Navios vikings preservados do século IX são exibidos no Museu do Navio Viking de Oslo. Bergen, com suas casas coloridas de madeira, é o ponto de partida de cruzeiros rumo ao deslumbrante Fiorde de Sogn. </p>
+            <button class="button-header">Saiba Mais</button>
 
         </div>
     </header>   
@@ -101,23 +102,81 @@
          
     </section> 
     <section class="servicos">
-        <div class="card">
-            <i data-feather = "map"> </i>
-            <h3>Guia turístico</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, necessitatibus exercitationem cumque eveniet rem illum quas, repellendus ullam possimus, aliquam ab asperiores a similique.</p>
-            <i data-feather = "heart"></i>
-            <h3>Seguro de vida</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi neque vitae temporibus odio.</p>
-            <i data-feather = "camera"></i>
-            <h3> Fotógrafo Profissional</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, tenetur saepe blanditiis nihil sapiente reiciendis maiores dignissimos repellendus tempora itaque a, recusandae.</p>
+        <h1 class="servicos-tittle">Serviços</h1>
+        <div class="servicos-card">
+            <div class="card">
+                <i data-feather = "map"> </i>
+                    <div class="card-content">
+                    <h3>Guia turístico</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, necessitatibus exercitationem cumque eveniet rem illum quas, repellendus ullam possimus, aliquam ab asperiores a similique.</p>
+                </div>
+                <button>Saiba mais</button>
+            </div>
+               
+            <div class="card">
+                <i data-feather = "heart"></i>
+
+                <div class="card-content">
+                    <h3>Seguro de vida</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam beatae temporibus asperiores dolorum ad architecto ea? Sapiente inventore ipsa impedit consequuntur.</p>
+                </div>
+               <button>Saiba mais</button>
+            </div>
             
+            <div class="card" >
+                <i data-feather = "camera" ></i>
+                <div class="card-content">
+                    <h3> Fotógrafo Profissional</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, tenetur saepe blanditiis nihil sapiente reiciendis maiores dignissimos repellendus tempora itaque a, recusandae.</p>
+                </div>
+                <button>Saiba mais</button>
+            </div>
+           
         </div>
+
+    </section>
+    <section class="contato">
+        <div class="card-contato">
+            <h1>Contato</h1>
+            <div class="card-contato-content">
+                <ul>
+                    <li class="li-contato"> <i data-feather="map-pin"></i> Rua José Inácio da Silva, 555</li>
+                    <li class="li-contato"> <i data-feather="phone"></i> (11) 5554-5654</li>
+                    <li class="li-contato"><i data-feather="at-sign"></i> travellingquest@hotmail.com </li>
+                </ul>
+            </div>
+        </div>
+        <div id="map">
+        </div>
+       
+      
+
 
     </section>
     <script>
         feather.replace()
-      </script>
+        // Initialize and add the map
+        function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
+        }
+        </script>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly"
+        async>
+        
+        </script>
+      
 
 </body>
 </html>

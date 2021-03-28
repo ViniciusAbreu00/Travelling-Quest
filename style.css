@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', monospace;
+   
 
     }
 
@@ -13,14 +13,20 @@ body{
     
 }
 header {
-    height: calc(100vh - 150px);
-    background: no-repeat center/cover url('Imagens/image-header.jpg')
+    height: calc(100vh - 100px);
+    background: no-repeat center/cover url('Imagens/robert-bye-cKBsq-5U17A-unsplash.jpg')
 }
+ ul {
+     list-style: none;
+ }
+
+
 div.texto-header {
     margin: auto ;
     justify-content: center;
     width: 70%;
-    color: rgba(255, 255, 255, 0.733);
+    color: #ffffff;
+    font-family:  'Open Sans', sans-serif;
     
 
     }
@@ -36,16 +42,16 @@ header nav ul {
 }
 header nav ul li{
     margin: 0 25px;
-    color: rgba(255, 255, 255, 0.849);
+    color: #3faecf;
     
 }
- button {
+.button-header {
     padding: 10px 10px;
     border-radius: 8px;
     box-shadow: 2px 2px 2px;
     font-weight: bold;
     border: none;
-    background-image: linear-gradient(to bottom, #db955c94, #745d636e);
+    background-image: linear-gradient(to bottom, #9b9aa0a1, #0499bbb2);
     font-family: 'Roboto', monospace;
  }
 
@@ -59,6 +65,7 @@ header nav ul li{
     text-align: center;
     margin: 25px;
     font-family: 'Open Sans', sans-serif;
+    color:#000000be ;
 }
  .pacotes .cards-pacotes {
      display: flex;
@@ -158,18 +165,117 @@ ul.icones li {
 }
 .servicos {
     background-color: #EDF8FD ;
+    padding: 15px ; 
+    
+}
+.servicos-tittle {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000000be;
 }
 .servicos .card {
-    margin-left: 20px ;
+    width: 250px;
     font-family: 'Open Sans', sans-serif ;
-}
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    margin: 33px 20px;
+   
+    
+    
+    
+    
+    
+}.servicos .servicos-card {
+    display: flex;
+    max-width: 950px;
+    justify-content:center;
+    margin: auto;
+    flex-wrap: wrap;
+    
 
-.servicos .card svg {
-    color: #226F54;
-    stroke-width: 2.5px;
     
 }
 
+.servicos-card svg {
+    color: #226F54;
+    stroke-width: 2.5px;
+    width: 45px;
+    height: 45px;
+    transition: all 0.5s;
+    
+}
+.servicos-card svg:hover{
+    stroke: #226f5486;
+    transform: scale(1.1);
+}
+
+.servicos .card button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px;
+    font-weight: bold;
+    border: none;
+    background-color:#bddbcbbd ;
+    font-family: 'Roboto', monospace;
+    transition-duration: 0.5s;
+    
+    
+}   
+.servicos .card button:hover {
+    background-color: #bddbcb ;
+    transform:scale(1.1);
+} 
+.servicos .card .card-content {
+ height: 350px;
+
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+  
+.contato {
+    padding: 60px;
+    background-color:#BDDBCB ;
+    position: relative;
+}
+.contato .card-contato {
+    background-color:rgba(255, 255, 255, 0.863);
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    z-index: 99;
+
+    top: calc( 50% - 150px);
+    left: calc(25% - 300px);
+    border-radius: 8px ;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.459);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-contato-content ul {
+    
+    list-style: none;
+}
+.card-contato-content ul li {
+    font-size: 1.2rem;
+    display: flex ; 
+    align-items: center;
+   
+
+}
+.card-contato-content ul li svg {
+    margin: 10px ;
+}
+.card-contato h1 {
+    text-align: center;
+}
+.li-contato {
+    margin: 10px;
+}
 
  /* Responsividade*/
 
@@ -179,8 +285,7 @@ ul.icones li {
       margin-bottom: 55px;
    }
    
-   
-    header nav ul {
+   header nav ul {
         z-index: 99;
         position:fixed;
         bottom: 0;
@@ -199,6 +304,13 @@ ul.icones li {
         header nav p {
             width: 100%;
             text-align: center;
+        }
+        .contato {
+            padding: 60px 0;
+        }
+        .contato .card-contato {
+            position: static;
+            margin: 60px auto;
         }
     
 }
