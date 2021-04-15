@@ -79,6 +79,7 @@ header nav ul li a:hover {
     background-image: linear-gradient(to bottom, #6958605d, #ffad506b);
     font-family:  'Open Sans', sans-serif;
     transition-duration: 0.5s;
+    cursor: pointer;
     
  }
 
