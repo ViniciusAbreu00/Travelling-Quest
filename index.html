@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelling Quest</title>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
@@ -14,17 +15,18 @@
     <header>
         <nav>
             
-            <img src="Imagens/Travelling Quest Logotipo.png" alt="LogoQuest">
+            <img src="Imagens/Travelling Quest Logotipo.png" alt=" Logo">
+
             <ul>
-                <li>Home</li>
-                <li>Contato</li>
-                <li>Quem Somos</li>
-                <li>Contato</li>
+                <li> <a href="#home"> Home</a></li>
+                <li> <a href="#contatos">Contato</a></li>
+                <li> <a href="#pacotes">Pacotes</a></li>
+                <li> <a href="#servicos">Serviços</a></li>
         
             </ul>
             
         </nav>
-        <div class="texto-header">
+        <div id="home" class="texto-header">
             
             <h1>Conheça a <b>Noruega</b></h1>
             <p>A Noruega é um país escandinavo que abrange montanhas, geleiras e fiordes litorâneos profundos. Oslo, a capital, é uma cidade cheia de áreas verdes e museus. Navios vikings preservados do século IX são exibidos no Museu do Navio Viking de Oslo. Bergen, com suas casas coloridas de madeira, é o ponto de partida de cruzeiros rumo ao deslumbrante Fiorde de Sogn. </p>
@@ -32,7 +34,7 @@
 
         </div>
     </header>   
-    <section class="pacotes">
+    <section id="pacotes" class="pacotes">
         <h1 class="pacotes-title">Conheça nossos pacotes</h1>
         <div class="cards-pacotes">
             <div class="card">
@@ -101,7 +103,7 @@
         </div>
          
     </section> 
-    <section class="servicos">
+    <section id="servicos" class="servicos">
         <h1 class="servicos-tittle">Serviços</h1>
         <div class="servicos-card">
             <div class="card">
@@ -135,7 +137,7 @@
         </div>
 
     </section>
-    <section class="contato">
+    <section id="contatos" class="contato">
         <div class="card-contato">
             <h1>Contato</h1>
             <div class="card-contato-content">
@@ -155,7 +157,7 @@
     </section>
     <script>
         feather.replace()
-        // Initialize and add the map
+        
         function initMap() {
         // The location of Uluru
         const uluru = { lat: -25.344, lng: 131.036 };
@@ -176,7 +178,32 @@
         async>
         
         </script>
-      
+        <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+            
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+        </script>    
 
 </body>
 </html>
