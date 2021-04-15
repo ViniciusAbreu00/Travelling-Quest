@@ -48,21 +48,43 @@ header nav ul {
 
 header nav ul li{
     margin: 0 25px;
-    color:#ffffffc9;
     font-size: 20px;
     font-weight: bold;
     
 }
+
+header nav ul li a {
+    color:#ffffff;
+    transition-duration: 0.5s;
+    
+
+}
+
+header nav ul li a:hover {
+    transform:scale(1.1);
+    font-size:  25px;
+    
+
+}
+
+
+
+
 .button-header {
     padding: 5px 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 2px;
     font-weight: bold;
     border: none;
-    background-image: linear-gradient(to bottom, white, #BDDBCB);
+    background-image: linear-gradient(to bottom, #6958605d, #ffad506b);
     font-family:  'Open Sans', sans-serif;
+    transition-duration: 0.5s;
     
-    
+ }
+
+ .button-header:hover {
+    font-size: 14px;
+
  }
 
 .pacotes {
