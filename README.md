@@ -1,2 +1,3 @@
 Site de viagens <br>
-Iniciando meu primeiro projeto com um site HTML CSS com poucos elementos de JS
+Projeto de um site estático feito para por em prática os aprendizados, neste site foi usado apenas HTML e CSS
+
